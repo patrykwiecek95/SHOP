@@ -1,0 +1,27 @@
+.slider{
+    .tns-nav{
+        display: flex;
+        justify-content: center;
+        margin: 15px 0;
+        gap:6px;
+        button{
+            width: 15px;
+            height: 15px;
+            background-color: $sliderDotBgColor;
+            border-radius: 50%;
+            transition: 300ms;
+            border: none;
+            &.tns-nav-active{
+                background-color: $sliderDotBgActiveColor;
+            }
+        }
+    }
+    &__item {
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+

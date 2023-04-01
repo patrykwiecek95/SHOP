@@ -1,0 +1,213 @@
+.navbar{
+    padding: 35px 0;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    background-color: $navbarBgColor;
+
+    &--open {
+        .navbar__menu{
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+        }
+    }
+
+    &--move{
+        box-shadow: 0 0 5px $navbarMoveBoxShadow;
+        
+        @include desktop{
+        .navbar__logo{
+            width: 0;
+            height: 0;
+            overflow: hidden;
+            margin: 0;
+        }
+        }
+    }
+    .container{
+        display: flex;
+        align-items: center;
+
+        @include forTablet{
+            justify-content: space-between;
+        }
+
+    }
+
+    &__search{
+        width: 25%;
+        position: relative;
+
+        @include forTablet{
+            display: none;
+        }
+    }
+
+    &__input{
+        height: 40px;
+        background-color: $navbarSearchInputBg;
+        border-radius: 40px;
+        border:0;
+        padding:0 60px 0 20px;
+        outline: none;
+        font-size: 14px;
+        width: 100%;
+    }
+
+    &__magnifying {
+        border: 0;
+        background: none;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        translate: 0 -50%;
+        cursor: pointer;
+    }
+
+    &__center{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @include forTablet{
+            width: auto;
+            align-items: flex-start;
+        }
+    }
+
+    &__logo{
+        margin: 0 0 40px 0;
+        transition: 500ms;
+        
+
+        @include forTablet{
+            margin: 0;
+            z-index: 200;
+        } 
+    }
+
+    &__menu{
+        @include reset-list;
+        display:flex;
+        gap: 40px;
+        
+        @include forTablet{
+            display: none;
+        } 
+    }
+
+    &__link{
+        font-weight: 500;
+        color: $navbarLinkColor;
+        transition: 300ms;
+
+        &:hover{
+            color: $navbarLinkHoverColor;
+        }
+    }
+
+    &__right{
+        display: flex;
+        width: 25%;
+        justify-content: flex-end;
+        gap:20px;
+
+        @include forTablet{
+            display: none;
+        }
+    }
+
+    &__button{
+        position: relative;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $navbarButtonColor;
+        font-size: 22px;
+    }
+
+    &__badge{
+        position: absolute;
+        width: 20px;
+        width: 20px;
+        background-color: $navbarBadgeBgColor;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-weight: 500;
+        top: 0;
+        right: 0;
+    }
+
+    &__hamburger{
+        width: 40px;
+        height: 24px;
+        background:none;
+        border: 0;
+        position: relative;
+        display: none;
+
+        @include forTablet{
+            display: block;
+        }
+
+        span{
+            width: 40px;
+            height: 4px;
+            border-radius: 4px;
+            position: absolute;
+            background-color: black;
+
+            &:nth-of-type(1){
+                top: 0;
+                left: 0;
+            }
+
+            &:nth-of-type(2){
+                top:10px;
+                left: 0;
+            }
+            &:nth-of-type(3){
+                top:20px;
+                left: 0;
+            }
+            
+        }
+
+        &--active{
+            span{
+                &:nth-of-type(2){
+                    display: none;
+                }
+
+                &:nth-of-type(1){
+                    top:2px;
+                    rotate: 45deg;
+                }
+
+                &:nth-of-type(3){
+                    top:2px;
+                    rotate: -45deg;
+                }
+            }
+        }
+    }
+
+}
+

@@ -1,0 +1,94 @@
+.blog{
+    padding:100px 0;
+    background-color: $blogBgColor;
+
+    &__header{
+        @include fluid-type(320px,1200px,20px,30px);
+        font-weight: 600;
+        text-align: center;
+        margin: 0 0 50px 0 ;
+    }
+    &__posts{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+    }
+
+    &__post{
+        padding: 0 15px;
+        width: calc(100%/3);
+
+        @include forTablet {
+            width: 50%;
+            margin: 0 0 30px 0;
+        }
+        
+        @include forBigPhone {
+            width: 100%;
+        }
+    }
+
+    &__post-bg{
+        background-color: $blogPostBgColor;
+        width: 100%;
+    }
+
+    &__photo{
+        display: block;
+        overflow: hidden;
+    }
+    &__img{
+        display: block;
+        width: 100%;
+    }
+
+    &__info{
+        padding: 20px;
+    }
+
+    &__category{
+        color: $blogPostCategoryFontColor;
+        font-size: 12px;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px 0;
+    }
+
+    &__tittle{
+        color: $blogPostTitleFontColor;
+        display: flex;
+        font-size: 20px;
+        margin: 0 0 10px 0 ;
+    }
+
+    &__desc{
+        color: $blogPostDescribstionFontColor;
+        line-height: 1.6;
+        font-size: 14px;
+        margin: 0;
+    }
+
+    &__button{
+        display: block;
+        margin-top: 50px;
+        text-align: center;
+    
+    }
+
+    &__allblogs{
+        color: $blogButtonAllBlogsColor;
+        background-color:$blogButtonAllBlogsBgColor;
+        padding: 10px 31px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 500;
+
+        &:hover{
+            color: $blogButtonAllBlogsHoverColor;
+            background-color:$blogButtonAllBlogsBgHoverColor;
+        }
+    }
+    
+}
