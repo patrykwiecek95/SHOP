@@ -36,10 +36,17 @@
     &__photo{
         display: block;
         overflow: hidden;
+        &:hover{
+            .blog__img{
+                scale: 1.1;
+            }
+        }
+
     }
     &__img{
         display: block;
         width: 100%;
+        transition: 500ms;
     }
 
     &__info{

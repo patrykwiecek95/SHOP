@@ -746,9 +746,14 @@ a {
   display: block;
   overflow: hidden;
 }
+.blog__photo:hover .blog__img {
+  scale: 1.1;
+}
 .blog__img {
   display: block;
   width: 100%;
+  -webkit-transition: 500ms;
+  transition: 500ms;
 }
 .blog__info {
   padding: 20px;

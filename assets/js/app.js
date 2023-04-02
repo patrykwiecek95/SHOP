@@ -27,4 +27,4 @@ hamburger.addEventListener("click", () => {
 
 
 
-AOS.init();
+// AOS.init();
