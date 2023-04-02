@@ -34,8 +34,10 @@
     }
 
     &__photo{
+        height: 300px;
         display: block;
         overflow: hidden;
+        position: relative;
         &:hover{
             .blog__img{
                 scale: 1.1;
@@ -45,8 +47,14 @@
     }
     &__img{
         display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
         width: 100%;
         transition: 500ms;
+        min-height: 300px;
+        object-fit: cover;
     }
 
     &__info{

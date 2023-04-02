@@ -18,7 +18,6 @@
 	}
 }
 
-
 @mixin forTablet {
 	@media (max-width: 1000px) {
 		@content;

@@ -2,6 +2,7 @@
     padding:50px 0;
 
     &__elements{
+        padding: 0 15px;
         margin: 0 -15px;
         display: flex;
         flex-wrap: wrap;
@@ -10,6 +11,15 @@
     &__element{
         width: 50%;
         position: relative;
+
+        @include forTablet {
+            width: 50%;
+            margin: 0 0 30px 0;
+        }
+        
+        @include forBigPhone {
+            width: 100%;
+        }
     }
 
     &__photo{
@@ -47,20 +57,24 @@
         font-size: 12px;
         color: $sliderv2InfoColor;
         transition: 500ms;
+        
 
     }
 
     &__title{
+        @include fluid-type(320px,1200px,20px,50px);
         display: block;
         position: absolute;
         top: 80px;
         left: 50%;
         translate: -50% 0;
         z-index: 10;
-        font-size: 48px;
+        // font-size: 48px;
         color: $sliderv2TitleColor;
         font-weight: 300;
         transition: 500ms;
+        
+        
     }
 
 }
